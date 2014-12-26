@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory name="">
+  <property name="hbm2ddl.auto">update</property>
+  <property name="dialect">org.hibernate.dialect.Oracle9Dialect</property>
+  <property name="connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+  <property name="connection.username">system</property>
+  <property name="connection.password">password</property>
+  <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+  <property name="show_sql">true</property>  
+  <!-- Mapping files -->
+  <mapping class="data.LoginData" resource="LoginData.hbm.xml"/>
+  <mapping class="data.CategoryData" resource="CategoryData.hbm.xml"/>
+  <mapping class="data.ItemData" resource="ItemData.hbm.xml"/>
+  <mapping class="data.CartData" resource="CartData.hbm.xml"/>
+  <mapping class="data.OrderData" resource="OrderData.hbm.xml"/>
+  <mapping class="data.TestData" resource="TestData.hbm.xml"/>
+ </session-factory>
+</hibernate-configuration>

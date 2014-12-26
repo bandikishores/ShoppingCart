@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--   
+	<hibernate-mapping default-lazy="false"> would result in load acting like get
+-->
+<hibernate-mapping >
+ <class name="data.LoginData" table="LOGIN" >
+  <id column="USERNAME" name="username" type="string"/>
+  <property column="PASSWORD" generated="never" lazy="false" name="password"/>
+  <property column="FIRST_NAME" generated="never" lazy="false" name="firstName"/>
+  <property column="LAST_NAME" generated="never" lazy="false" name="lastName"/>
+  <property column="ADDRESS" generated="never" lazy="false" name="address"/>
+  <property column="CITY" generated="never" lazy="false" name="city"/>
+  <property column="STATE" generated="never" lazy="false" name="state"/>
+  <property column="COUNTRY" generated="never" lazy="false" name="country"/>
+  <property column="CONTACT" generated="never" lazy="false" name="contact"/>
+  <property column="EMAIL" generated="never" lazy="false" name="email" />
+  <property column="TYPE" generated="never" lazy="false" name="type" />
+ </class>
+</hibernate-mapping>

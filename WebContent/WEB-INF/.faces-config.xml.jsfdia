@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#login.jsp" PATH="/login.jsp"
+  SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#login.jsp:0" NAME="item" PATH="/login.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="success::#index.jsp" NAME="output"
+    PATH="/index.jsp" TARGET="rules:#index.jsp" TITLE="success" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#login.jsp:1" NAME="item1" PATH="/login.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="success::#index.jsp" NAME="output"
+    PATH="/index.jsp" TARGET="rules:#index.jsp" TITLE="success" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#index.jsp" PATH="/index.jsp"
+  SHAPE="256,33,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#addCategory.jsp" PATH="/addCategory.jsp"
+  SHAPE="32,193,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#addCategory.jsp:0" NAME="item"
+   PATH="/addCategory.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="success::#index.jsp" NAME="output"
+    PATH="/index.jsp" TARGET="rules:#index.jsp" TITLE="success" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#addCategory.jsp:1" NAME="item1"
+   PATH="/addCategory.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="error::#addCategory.jsp" NAME="output"
+    PATH="/addCategory.jsp" TARGET="rules:#addCategory.jsp"
+    TITLE="error" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#registerUser.jsp" PATH="/registerUser.jsp"
+  SHAPE="48,337,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#registerUser.jsp:0" NAME="item"
+   PATH="/registerUser.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="success::#login.jsp" NAME="output"
+    PATH="/login.jsp" TARGET="rules:#login.jsp" TITLE="success" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#registerUser.jsp:1" NAME="item1"
+   PATH="/registerUser.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="error::#registerUser.jsp" NAME="output"
+    PATH="/registerUser.jsp" TARGET="rules:#registerUser.jsp"
+    TITLE="error" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#addItem.jsp" PATH="/addItem.jsp"
+  SHAPE="48,305,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#addItem.jsp:0" NAME="item"
+   PATH="/addItem.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="success::#index.jsp" NAME="output"
+    PATH="/index.jsp" TARGET="rules:#index.jsp" TITLE="success" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#addItem.jsp:1" NAME="item1"
+   PATH="/addItem.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="error::#addItem.jsp" NAME="output"
+    PATH="/addItem.jsp" TARGET="rules:#addItem.jsp" TITLE="error" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#itemDisplay.jsp" PATH="/itemDisplay.jsp"
+  SHAPE="48,593,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#itemDisplay.jsp:0" NAME="item"
+   PATH="/itemDisplay.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="itemList::#itemList.jsp" NAME="output"
+    PATH="/itemList.jsp" TARGET="rules:#itemList.jsp" TITLE="itemList" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#itemDisplay.jsp:1" NAME="item1"
+   PATH="/itemDisplay.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="itemDisplay::#itemDisplay.jsp" NAME="output"
+    PATH="/itemDisplay.jsp" TARGET="rules:#itemDisplay.jsp"
+    TITLE="itemDisplay" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#itemDisplay.jsp:2" NAME="item2"
+   PATH="/itemDisplay.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="error::#itemDisplay.jsp" NAME="output"
+    PATH="/itemDisplay.jsp" TARGET="rules:#itemDisplay.jsp"
+    TITLE="error" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#itemList.jsp" PATH="/itemList.jsp"
+  SHAPE="288,721,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#LogoutServlet.view"
+  PATH="/LogoutServlet.view" SHAPE="64,593,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#LogoutServlet.view:0" NAME="item"
+   PATH="/LogoutServlet.view" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="error::#login.jsp" NAME="output"
+    PATH="/login.jsp" TARGET="rules:#login.jsp" TITLE="error" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#LogoutServlet.view:1" NAME="item1"
+   PATH="/LogoutServlet.view" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="error::#login.jsp" NAME="output"
+    PATH="/login.jsp" TARGET="rules:#login.jsp" TITLE="error" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:" SHAPE="64,593,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::0" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="successfulLogin::#index.jsp" NAME="output"
+    PATH="/index.jsp" TARGET="rules:#index.jsp" TITLE="successfulLogin" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::1" SHAPE="80,593,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::1" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="errorLogin::#login.jsp" NAME="output"
+    PATH="/login.jsp" TARGET="rules:#login.jsp" TITLE="errorLogin" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#cart.jsp" PATH="/cart.jsp"
+  SHAPE="80,945,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#cart.jsp:0" NAME="item" PATH="/cart.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="index::#index.jsp" NAME="output"
+    PATH="/index.jsp" TARGET="rules:#index.jsp" TITLE="index" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#cart.jsp:1" NAME="item1" PATH="/cart.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="cart::#cart.jsp" NAME="output"
+    PATH="/cart.jsp" TARGET="rules:#cart.jsp" TITLE="cart" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#cart.jsp:2" NAME="item2" PATH="/cart.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="error::#cart.jsp" NAME="output"
+    PATH="/cart.jsp" TARGET="rules:#cart.jsp" TITLE="error" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+</PROCESS>

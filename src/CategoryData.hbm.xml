@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-lazy="false">
+ <class name="data.CategoryData" table="CATEGORY" >
+  	<id name="id" column="CAT_ID" type="long">
+		<generator class="sequence">
+			<param name="sequence">CATEGORY_ID_SEQ</param>
+		</generator>
+	</id>
+  <property column="CAT_NAME" generated="never" lazy="false" name="name"/>
+  <property column="CAT_DESCRIPTION" generated="never" lazy="false" name="description" />
+
+	<set name="items" table="ITEMS" inverse="true"	lazy="false" fetch="select" >
+		<key update="false">
+			<column name="CAT_ID" not-null="true" />
+		</key>
+		<one-to-many class="data.ItemData" />
+	</set>
+        
+ </class>
+</hibernate-mapping>

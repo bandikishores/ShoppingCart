@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-lazy="false">
+ <class name="data.ItemData" table="ITEMS" >
+  	<id name="id" column="ITEM_ID" type="long">
+		<generator class="sequence">
+			<param name="sequence">ITEM_ID_SEQ</param>
+		</generator>
+	</id>
+  <property column="ITEM_NAME" generated="never" lazy="false" name="name"/>
+  <property column="ITEM_DESC" generated="never" lazy="false" name="description" />
+  <property column="IMAGE_URL" generated="never" lazy="false" name="imageUrl" />
+  <property column="CAT_ID" generated="never" lazy="false" name="categoryId" />
+  <property column="COST" generated="never" lazy="false" name="cost" />
+  <property column="QTY" generated="never" lazy="false" name="qty" />
+  <property column="CREATED_USER" generated="never" lazy="false" name="username" />
+  
+  <many-to-one name="category" class="data.CategoryData" fetch="select" lazy="false" insert="false" update="false" >
+       <column name="CAT_ID" not-null="true" />
+  </many-to-one>
+        
+ </class>
+</hibernate-mapping>

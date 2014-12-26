@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13610820212852" configfile="/ShoppingCart/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="login" x="338" y="501" id="pf13610820902449" referenceLink="//@navigationRule.8/@navigationCase.0/@toViewId|" outlinks="pf136108209024410 pf13820279701940" inlinks="pf13820279701941 pf13820279701942 pf13820279701943 pf13820279701944" path="/login.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="index" x="554" y="501" id="pf136108209024411" referenceLink="//@navigationRule.15/@navigationCase.0/@toViewId|" inlinks="pf136108209024410 pf13820279701945 pf13820279701940 pf13820279701946 pf13820279701947 pf13820279701948" path="/index.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="*" x="122" y="178" id="pf13820279701949" outlinks="pf13820279701945 pf13820279701941" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="LogoutServlet.view" x="122" y="562" id="pf138202797019410" referenceLink="//@navigationRule.5/@fromViewId|" outlinks="pf13820279701942 pf13820279701943" path="/LogoutServlet.view"/>
+  <nodes xsi:type="pageflow:PFPage" name="addCategory" x="338" y="885" id="pf138202797019411" referenceLink="//@navigationRule.7/@navigationCase.0/@toViewId|" outlinks="pf13820279701946 pf138202797019412" inlinks="pf138202797019412" path="/addCategory.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="registerUser" x="122" y="946" id="pf138202797019413" referenceLink="//@navigationRule.9/@navigationCase.0/@toViewId|" outlinks="pf13820279701944 pf138202797019414" inlinks="pf138202797019414" path="/registerUser.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="addItem" x="338" y="1269" id="pf138202797019415" referenceLink="//@navigationRule.11/@navigationCase.0/@toViewId|" outlinks="pf13820279701947 pf138202797019416" inlinks="pf138202797019416" path="/addItem.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="itemDisplay" x="122" y="2037" id="pf138202797019417" referenceLink="//@navigationRule.14/@navigationCase.0/@toViewId|" outlinks="pf138202797019418 pf138202797019419 pf138202797019420" inlinks="pf138202797019419 pf138202797019420" path="/itemDisplay.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="itemList" x="338" y="2037" id="pf138202797019421" referenceLink="//@navigationRule.12/@navigationCase.0/@toViewId|" inlinks="pf138202797019418" path="/itemList.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="cart" x="338" y="1653" id="pf138202797019422" referenceLink="//@navigationRule.17/@navigationCase.0/@toViewId|" outlinks="pf13820279701948 pf138202797019423 pf138202797019424" inlinks="pf138202797019423 pf138202797019424" path="/cart.jsp"/>
+  <links id="pf136108209024410" target="pf136108209024411" source="pf13610820902449" outcome="success"/>
+  <links id="pf13820279701945" target="pf136108209024411" source="pf13820279701949" outcome="successfulLogin"/>
+  <links id="pf13820279701941" target="pf13610820902449" source="pf13820279701949" outcome="errorLogin"/>
+  <links id="pf13820279701940" target="pf136108209024411" source="pf13610820902449" outcome="success"/>
+  <links id="pf13820279701942" target="pf13610820902449" source="pf138202797019410" outcome="error"/>
+  <links id="pf13820279701943" target="pf13610820902449" source="pf138202797019410" outcome="error"/>
+  <links id="pf13820279701946" target="pf136108209024411" source="pf138202797019411" outcome="success"/>
+  <links id="pf13820279701944" target="pf13610820902449" source="pf138202797019413" outcome="success"/>
+  <links id="pf13820279701947" target="pf136108209024411" source="pf138202797019415" outcome="success"/>
+  <links id="pf138202797019418" target="pf138202797019421" source="pf138202797019417" outcome="itemList"/>
+  <links id="pf13820279701948" target="pf136108209024411" source="pf138202797019422" outcome="index"/>
+  <links id="pf138202797019412" target="pf138202797019411" source="pf138202797019411" outcome="error">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+  <links id="pf138202797019414" target="pf138202797019413" source="pf138202797019413" outcome="error">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+  <links id="pf138202797019416" target="pf138202797019415" source="pf138202797019415" outcome="error">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+  <links id="pf138202797019419" target="pf138202797019417" source="pf138202797019417" outcome="itemDisplay">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+  <links id="pf138202797019420" target="pf138202797019417" source="pf138202797019417" outcome="error">
+    <bendPoints d1Height="-66" d2Height="-66"/>
+    <bendPoints d1Width="-94" d1Height="-66" d2Width="-94" d2Height="-66"/>
+    <bendPoints d1Width="-94" d2Width="-94"/>
+  </links>
+  <links id="pf138202797019423" target="pf138202797019422" source="pf138202797019422" outcome="cart">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+  <links id="pf138202797019424" target="pf138202797019422" source="pf138202797019422" outcome="error">
+    <bendPoints d1Height="-66" d2Height="-66"/>
+    <bendPoints d1Width="-94" d1Height="-66" d2Width="-94" d2Height="-66"/>
+    <bendPoints d1Width="-94" d2Width="-94"/>
+  </links>
+</pageflow:Pageflow>
